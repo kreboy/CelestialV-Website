@@ -1,0 +1,294 @@
+/* styles.css */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: transparent; /* Schöner lila Hintergrund */
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; /* Standardmäßig auf cover gesetzt */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+/* Media Queries für verschiedene Bildschirmgrößen */
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    body {
+        background-size: 300%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        background-size: 200%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        background-size: 150%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-size: cover;
+    }
+}
+
+.welcome {
+    font-size: 3em;
+    font-weight: bold;
+    color: #38aa88;
+    transition: transform 0.2s ease-in-out;
+    margin-top: 80px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.welcome:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #3dd4b4, 0 0 20px #3dd4b4, 0 0 40px #3dd4b4;
+    color: #fff;
+}
+
+.footer {
+    font-weight: bold;
+    color: #38aa88;
+    transition: transform 0.2s ease-in-out;
+    margin-top: 80px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.footer:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #3dd4b4, 0 0 20px #3dd4b4, 0 0 40px #3dd4b4;
+    color: #fff;
+}
+
+.logo {
+    position: fixed;
+    top: 65px; /* Weiter unten positioniert */
+    right: 20px; /* Weiter rechts positioniert */
+    width: 120px; /* Größer gemacht */
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.gtagirl {
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.gtagirl:hover {
+    transform: scale(1.1);
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2cm 0;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.box {
+    width: 30%;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.box-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.box-content h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+}
+
+.person-image, .schild-image, .rocket-image {
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.discord-box {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.discord-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.discord-logo {
+    width: 60%;
+    height: auto;
+    margin-top: 20%;
+}
+
+header {
+    width: 100%;
+}
+
+header nav {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #08835a; /* Dunkleres Lila */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+header nav a:hover {
+    background-color: #24cc9a; /* Helleres Lila für Hover-Effekt */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10cm; /* Abstand zum oberen Abschnitt */
+}
+
+.section {
+    width: 80%; /* Breite des Abschnitts */
+    height: 50vh; /* Höhe des Abschnitts */
+    background-color: rgba(0, 0, 0, 0.8); /* Hintergrundfarbe */
+    color: #fff; /* Textfarbe */
+    border-radius: 15px; /* Abgerundete Ecken */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4); /* Schatten */
+    overflow: hidden; /* Überlauf verstecken */
+    margin-bottom: 5cm; /* Abstand zum nächsten Abschnitt */
+    opacity: 0; /* Anfangs unsichtbar machen */
+    transform: translateY(20px); /* Anfangs etwas nach unten verschieben */
+    transition: all 0.3s ease; /* Übergangseffekt */
+    cursor: pointer; /* Zeiger-Cursor für Hover-Effekt */
+}
+
+.section:hover {
+    box-shadow: 0 12px 24px rgba(0,0,0,0.6); /* Stärkerer Schatten beim Hover */
+    transform: translateY(-10px); /* Leichte Anhebung */
+}
+
+.section.active {
+    opacity: 1; /* Bei Aktivierung sichtbar machen */
+    transform: translateY(0); /* Keine Verschiebung */
+}
+
+.section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+}
+
+.section h2 {
+    font-size: 2.5rem; /* Überschriftengröße */
+    margin-bottom: 20px; /* Abstand zur nächsten Zeile */
+}
+
+.section p {
+    font-size: 1.25rem; /* Schriftgröße */
+    transition: color 0.3s ease; /* Übergangseffekt für die Farbänderung */
+}
+
+.section:hover p {
+    color: #ece5f3; /* Farbe ändern beim Hover */
+    text-shadow: 0 0 10px #f2ecf7, 0 0 20px #efe9f5, 0 0 40px #efe9f5; /* Leuchteffekt */
+}
+
+@media screen and (max-width: 980px) {
+    .section {
+        width: 90%; /* Anpassung für kleinere Bildschirme */
+    }
+}
+
+@media screen and (max-width: 580px) {
+    header nav a {
+        font-size: 1rem;
+    }
+}
